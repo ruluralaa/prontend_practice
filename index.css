@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* 이부분 확인 */
 body {
   font-family: "Pretendard", sans-serif;
   background-color: #ffffff;
@@ -16,41 +16,84 @@ body {
   width: 100%;
 }
 
+.body_padding {
+  margin-bottom: 300px;
+}
 /* NAVIGATION */
 nav {
   width: 100%;
   max-width: 1200px;
-  padding: 1rem 2rem;
+  /* 이부분 확인인 */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 306px;
+  padding: 41px 0 200px 0;
 }
 
-nav img {
-  height: 40px;
+nav figure img {
+  height: 30px;
+  width: 30px;
+}
+.logo {
+  height: 59px;
+  width: 97px;
 }
 
 nav div {
   display: flex;
-  gap: 1.5rem;
+  gap: 43px;
 }
 
-nav h5 {
-  font-size: 1rem;
+nav ul {
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0px;
+  /* light Content */
+  color: #a7a7a7;
   cursor: pointer;
-  color: #444;
+  list-style: none;
+  gap: 60px;
+}
+nav figure {
+  display: flex;
+  gap: 20px;
 }
 
 /* HEADER */
 header {
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
-  margin: 2rem 0;
+  /* 이부분 다시 확인 */
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  gap: 2rem;
+  gap: 20px;
+  padding: 20px;
+}
+
+header h1 {
+  width: 636px;
+  font-family: Noto Sans;
+  font-size: 58px;
+  font-weight: bold;
+  line-height: 70px;
+  letter-spacing: -1px;
+  color: #42446e;
+}
+
+.torry {
+  display: inline-block;
+  background: linear-gradient(90deg, #13b0f5 -4%, #13b0f5 -2%, #e70faa 99%);
+  background-clip: text; /* ✅ 표준 속성 */
+  -webkit-background-clip: text; /* ✅ 웹킷 전용 */
+  -webkit-text-fill-color: transparent;
 }
 
 header h2 {
@@ -59,8 +102,8 @@ header h2 {
 }
 
 header img {
-  width: 150px;
-  height: 150px;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #6c63ff;
@@ -74,27 +117,35 @@ section {
   text-align: center;
 }
 
-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+section h2 {
+  margin-bottom: 40px;
+  color: #42446e;
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
 }
 
 section p {
-  color: #777;
-  margin-bottom: 1.5rem;
+  color: #666666;
+  margin-bottom: 138px;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 26px;
 }
 
-figure {
+section figure {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 96px;
   justify-content: center;
-  margin-top: 1rem;
 }
 
-figure img {
-  width: 50px;
-  height: 50px;
+section figure img {
+  width: 120px;
+  height: 120px;
   object-fit: contain;
 }
 
@@ -104,7 +155,6 @@ figure img {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1200px;
-  margin: 0 auto;
 }
 .project-card {
   background-color: #fff;
@@ -114,10 +164,15 @@ figure img {
   width: 300px;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   text-align: left;
   transition: transform 0.2s ease-in-out;
 }
+
+/* .project-card div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 .project-card:hover {
   transform: translateY(-5px);
@@ -130,8 +185,8 @@ figure img {
   border-radius: 12px;
 }
 
-.project-card h5 {
-  margin: 1rem 0 0.5rem;
+.project-card h3 {
+  margin: 0 0 0.5rem;
   font-size: 1.2rem;
   font-weight: 600;
   color: #111;
@@ -152,28 +207,77 @@ figure img {
   color: #2f6bff;
   margin-left: 3px;
 }
+.project-card .link {
+  width: 20px;
+  height: 20px;
+  background-image: url("link.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.project-card .view_code {
+  width: 20px;
+  height: 20px;
+  background-image: url("github-142-svgrepo-com.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.project-card .project_link {
+  display: flex;
+  align-items: end; /* 세로 중앙 정렬 */
+  gap: 48px; /* 요소 사이 간격 (원하는 값으로 조절 가능) */
+}
 
 /* FOOTER */
 footer {
   width: 100%;
   max-width: 1000px;
-  margin: 3rem auto 1rem;
-  padding-top: 2rem;
-  border-top: 1px solid #eee;
   text-align: center;
   font-size: 0.8rem;
   color: #aaa;
+  margin-top: 200px;
+}
+.footer_start {
+  border-bottom: 1px solid #42446e;
+  padding-bottom: 48px;
+}
+.footer_ {
+  display: flex;
+  gap: 48px;
+}
+.footer_h6 {
+  display: flex;
+  gap: 33px;
+}
+
+.footer_image {
+  display: flex;
+  gap: 20px;
+}
+
+footer h6 {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 26px;
+  letter-spacing: 0px;
+  /* light Content */
+  color: #a7a7a7;
 }
 
 footer div {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
   justify-content: space-between;
 }
 
 footer img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+}
+
+.footer_final {
+  padding: 48px 0;
 }
