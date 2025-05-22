@@ -1,9 +1,13 @@
 /* Reset 기본 스타일 */
-* {
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 /* 이부분 확인 */
 body {
   font-family: "Pretendard", sans-serif;
@@ -109,6 +113,11 @@ header img {
   border: 3px solid #6c63ff;
 }
 
+@media (max-width: 375px) {
+  .header {
+    flex-direction: column-reverse;
+  }
+}
 /* SECTION - TECH STACK */
 section {
   width: 100%;
@@ -139,6 +148,7 @@ section p {
 section figure {
   display: flex;
   flex-wrap: wrap;
+  flex-
   gap: 96px;
   justify-content: center;
 }
@@ -152,7 +162,7 @@ section figure img {
 /* SECTION - PROJECTS */
 .project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 1200px;
 }
